@@ -7,9 +7,12 @@ namespace MixedNumberOperations
 {
     public class MixedNumber
     {
+        private int wholeNumber;
+        private int numerator;
+        private int denominator;
+
         public MixedNumber()
         {
-
         }
 
         public MixedNumber(string input)
@@ -85,9 +88,58 @@ namespace MixedNumberOperations
             throw new ArgumentException("Invalid Mixed number format.");
         }
 
-        public int WholeNumber { get; set; }
-        public int Numerator { get; set; }
-        public int Denominator { get; set; }
+        public int WholeNumber {
+            get
+            {
+                return wholeNumber;
+            }
+
+            set
+            {
+                if(value < 0)
+                {
+                    throw new ArgumentException("No negative numbers.");
+                }
+
+                wholeNumber = value;
+            }
+        }
+
+        public int Numerator
+        {
+            get
+            {
+                return numerator;
+            }
+
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("No negative numbers.");
+                }
+
+                numerator = value;
+            }
+        }
+
+        public int Denominator
+        {
+            get
+            {
+                return denominator;
+            }
+
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("No negative numbers.");
+                }
+
+                denominator = value;
+            }
+        }
 
         public bool IsNegative { get; set; }
 

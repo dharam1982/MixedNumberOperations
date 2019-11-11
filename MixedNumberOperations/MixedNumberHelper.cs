@@ -26,12 +26,16 @@ namespace MixedNumberOperations
                 var oneWholeNumber = one.IsNegative == true ? -1 * one.WholeNumber : one.WholeNumber;
                 var twoWholenumber = two.IsNegative == true ? -1 * two.WholeNumber : two.WholeNumber;
 
-                result.WholeNumber = oneWholeNumber + twoWholenumber;
+                var wholeNumber = oneWholeNumber + twoWholenumber;
 
-                if (result.WholeNumber < 0)
+                if (wholeNumber < 0)
                 {
-                    result.WholeNumber *= -1;
+                    result.WholeNumber = wholeNumber * -1;
                     result.IsNegative = true;
+                }
+                else
+                {
+                    result.WholeNumber = wholeNumber;
                 }
 
                 return result;
@@ -105,16 +109,16 @@ namespace MixedNumberOperations
                 var oneWholeNumber = one.IsNegative == true ? -1 * one.WholeNumber : one.WholeNumber;
                 var twoWholenumber = two.IsNegative == true ? -1 * two.WholeNumber : two.WholeNumber;
 
-                result.WholeNumber = oneWholeNumber - twoWholenumber;
+                var wholeNumber = oneWholeNumber - twoWholenumber;
 
-                if (result.WholeNumber == 0)
+                if (wholeNumber < 0)
                 {
-                    result.IsNegative = false;
-                }
-                else if (result.WholeNumber < 0)
-                {
-                    result.WholeNumber *= -1;
+                    result.WholeNumber = wholeNumber * - 1;
                     result.IsNegative = true;
+                }
+                else
+                {
+                    result.WholeNumber = wholeNumber;
                 }
 
                 return result;
@@ -177,12 +181,16 @@ namespace MixedNumberOperations
                 var oneWholeNumber = one.IsNegative == true ? -1 * one.WholeNumber : one.WholeNumber;
                 var twoWholenumber = two.IsNegative == true ? -1 * two.WholeNumber : two.WholeNumber;
 
-                result.WholeNumber = oneWholeNumber * twoWholenumber;
+                var wholeNumber = oneWholeNumber * twoWholenumber;
 
-                if (result.WholeNumber < 0)
+                if (wholeNumber < 0)
                 {
-                    result.WholeNumber *= -1;
+                    result.WholeNumber = wholeNumber * - 1;
                     result.IsNegative = true;
+                }
+                else
+                {
+                    result.WholeNumber = wholeNumber;
                 }
 
                 Reduce(result);
