@@ -66,15 +66,15 @@ namespace MixedNumberOperations
             var result = new MixedNumber();
             if (one.IsWholeNumber && two.IsWholeNumber)
             {
-                var oneWholeNumber = one.isNegative == true ? -1 * one.WholeNumber : one.WholeNumber;
-                var twoWholenumber = two.isNegative == true ? -1 * two.WholeNumber : two.WholeNumber;
+                var oneWholeNumber = one.IsNegative == true ? -1 * one.WholeNumber : one.WholeNumber;
+                var twoWholenumber = two.IsNegative == true ? -1 * two.WholeNumber : two.WholeNumber;
 
                 result.WholeNumber = oneWholeNumber + twoWholenumber;
 
                 if (result.WholeNumber < 0)
                 {
                     result.WholeNumber *= -1;
-                    result.isNegative = true;
+                    result.IsNegative = true;
                 }
 
                 return result;
@@ -106,8 +106,8 @@ namespace MixedNumberOperations
             }
 
             var three = new MixedNumber();
-            var xNumerator = x.isNegative ? -1 * x.Numerator : x.Numerator;
-            var yNumerator = y.isNegative ? -1 * y.Numerator : y.Numerator;
+            var xNumerator = x.IsNegative ? -1 * x.Numerator : x.Numerator;
+            var yNumerator = y.IsNegative ? -1 * y.Numerator : y.Numerator;
             var n = xNumerator + yNumerator;
             if (n == 0)
             {
@@ -115,7 +115,7 @@ namespace MixedNumberOperations
             }
             else if (n < 0)
             {
-                three.isNegative = true;
+                three.IsNegative = true;
                 n *= -1;
             }
 
@@ -131,7 +131,7 @@ namespace MixedNumberOperations
             if (one.IsZero && two.IsZero) return one;
             if(one.IsZero)
             {
-                two.isNegative = !two.isNegative;
+                two.IsNegative = !two.IsNegative;
                 return two;
             }
 
@@ -143,19 +143,19 @@ namespace MixedNumberOperations
             var result = new MixedNumber();
             if (one.IsWholeNumber && two.IsWholeNumber)
             {
-                var oneWholeNumber = one.isNegative == true ? -1 * one.WholeNumber : one.WholeNumber;
-                var twoWholenumber = two.isNegative == true ? -1 * two.WholeNumber : two.WholeNumber;
+                var oneWholeNumber = one.IsNegative == true ? -1 * one.WholeNumber : one.WholeNumber;
+                var twoWholenumber = two.IsNegative == true ? -1 * two.WholeNumber : two.WholeNumber;
 
                 result.WholeNumber = oneWholeNumber - twoWholenumber;
 
                 if(result.WholeNumber == 0)
                 {
-                    result.isNegative = false;
+                    result.IsNegative = false;
                 }
                 else if(result.WholeNumber < 0)
                 {
                     result.WholeNumber *= -1;
-                    result.isNegative = true;
+                    result.IsNegative = true;
                 }
 
                 return result;
@@ -187,8 +187,8 @@ namespace MixedNumberOperations
             }
 
             var three = new MixedNumber();
-            var xNumerator = x.isNegative ? -1 * x.Numerator : x.Numerator;
-            var yNumerator = y.isNegative ? -1 * y.Numerator : y.Numerator;
+            var xNumerator = x.IsNegative ? -1 * x.Numerator : x.Numerator;
+            var yNumerator = y.IsNegative ? -1 * y.Numerator : y.Numerator;
             var n = xNumerator - yNumerator;
             if(n == 0)
             {
@@ -196,7 +196,7 @@ namespace MixedNumberOperations
             }
             else if (n < 0)
             {
-                three.isNegative = true;
+                three.IsNegative = true;
                 n *= -1;
             }
 
@@ -214,15 +214,15 @@ namespace MixedNumberOperations
             var result = new MixedNumber();
             if (one.IsWholeNumber && two.IsWholeNumber)
             {
-                var oneWholeNumber = one.isNegative == true ? -1 * one.WholeNumber : one.WholeNumber;
-                var twoWholenumber = two.isNegative == true ? -1 * two.WholeNumber : two.WholeNumber;
+                var oneWholeNumber = one.IsNegative == true ? -1 * one.WholeNumber : one.WholeNumber;
+                var twoWholenumber = two.IsNegative == true ? -1 * two.WholeNumber : two.WholeNumber;
 
                 result.WholeNumber = oneWholeNumber * twoWholenumber;
 
                 if (result.WholeNumber < 0)
                 {
                     result.WholeNumber *= -1;
-                    result.isNegative = true;
+                    result.IsNegative = true;
                 }
 
                 return result;
@@ -247,10 +247,10 @@ namespace MixedNumberOperations
             result = new MixedNumber();
             result.Numerator = x.Numerator * y.Numerator;
             result.Denominator = x.Denominator * y.Denominator;
-            result.isNegative = true;
-            if ((x.isNegative == true && y.isNegative == true) || (x.isNegative == false && y.isNegative == false))
+            result.IsNegative = true;
+            if ((x.IsNegative == true && y.IsNegative == true) || (x.IsNegative == false && y.IsNegative == false))
             {
-                result.isNegative = false;
+                result.IsNegative = false;
             }
 
             Reduce(result);
@@ -269,10 +269,10 @@ namespace MixedNumberOperations
             {
                 result.Numerator = one.WholeNumber;
                 result.Denominator = two.WholeNumber;
-                result.isNegative = true;
-                if ((one.isNegative == true && two.isNegative == true) || (one.isNegative == false && two.isNegative == false))
+                result.IsNegative = true;
+                if ((one.IsNegative == true && two.IsNegative == true) || (one.IsNegative == false && two.IsNegative == false))
                 {
-                    result.isNegative = false;
+                    result.IsNegative = false;
                 }
 
                 Reduce(result);
@@ -303,10 +303,10 @@ namespace MixedNumberOperations
             result = new MixedNumber();
             result.Numerator = x.Numerator * y.Numerator;
             result.Denominator = x.Denominator * y.Denominator;
-            result.isNegative = true;
-            if((x.isNegative == true && y.isNegative == true) || (x.isNegative == false && y.isNegative == false))
+            result.IsNegative = true;
+            if((x.IsNegative == true && y.IsNegative == true) || (x.IsNegative == false && y.IsNegative == false))
             {
-                result.isNegative = false;
+                result.IsNegative = false;
             }
 
             Reduce(result);
@@ -320,7 +320,7 @@ namespace MixedNumberOperations
             if (!num.IsMixedNumber) return num;
 
             var result = new MixedNumber();
-            result.isNegative = num.isNegative;
+            result.IsNegative = num.IsNegative;
             result.WholeNumber = 0;
             result.Numerator = (num.WholeNumber * num.Denominator) + num.Numerator;
             result.Denominator = num.Denominator;

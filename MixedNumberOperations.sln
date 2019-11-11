@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MixedNumberOperations", "MixedNumberOperations\MixedNumberOperations.csproj", "{1960F3AD-3CCD-43B2-859F-133132B9D0AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixedNumverOperations.Test", "MixedNumverOperations.Test\MixedNumverOperations.Test.csproj", "{04FBDED3-68A8-4316-AAB3-6242BDDFF895}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MixedNumverOperations.Test", "MixedNumverOperations.Test\MixedNumverOperations.Test.csproj", "{04FBDED3-68A8-4316-AAB3-6242BDDFF895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixedNumberOperations.ConoleApp", "MixedNumberOperations.ConoleApp\MixedNumberOperations.ConoleApp.csproj", "{27F98000-0FAD-4D19-ABE3-F822FEF158EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{04FBDED3-68A8-4316-AAB3-6242BDDFF895}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04FBDED3-68A8-4316-AAB3-6242BDDFF895}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04FBDED3-68A8-4316-AAB3-6242BDDFF895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F98000-0FAD-4D19-ABE3-F822FEF158EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F98000-0FAD-4D19-ABE3-F822FEF158EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F98000-0FAD-4D19-ABE3-F822FEF158EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F98000-0FAD-4D19-ABE3-F822FEF158EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
