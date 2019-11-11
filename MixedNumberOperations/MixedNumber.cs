@@ -139,6 +139,14 @@ namespace MixedNumberOperations
             }
         }
 
+        public static MixedNumber Zero
+        {
+            get
+            {
+                return new MixedNumber();
+            }
+        }
+
         public override string ToString()
         {
             if (this.IsZero) return "0";
@@ -155,6 +163,16 @@ namespace MixedNumberOperations
 
             return (this.IsNegative ? "-" : string.Empty) + this.WholeNumber + "_" + this.Numerator + "/" + this.Denominator;
 
+        }
+
+        public MixedNumber Clone()
+        {
+            var x = new MixedNumber();
+            x.IsNegative = IsNegative;
+            x.WholeNumber = WholeNumber;
+            x.Numerator = Numerator;
+            x.Denominator = Denominator;
+            return x;
         }
     }
 }
